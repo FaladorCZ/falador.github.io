@@ -1,91 +1,75 @@
 <!doctype html>
-<title>Osobní web SAP konzultanta</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jan Novák — SAP Consultant (CZ / EN)</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-<div class="brand">
-<div class="logo">JP</div>
-<div>
-<h1 data-i18n="name">Jméno Příjmení</h1>
-<p data-i18n="title">SAP SD Consultant</p>
-</div>
-</div>
-<nav>
-<button onclick="switchLang('cz')">🇨🇿</button>
-<button onclick="switchLang('en')">🇬🇧</button>
-</nav>
-</header>
+  <div class="wrap">
+    <header>
+      <div class="logo" role="banner">
+        <div class="mark" aria-hidden="true">JN</div>
+        <div>
+          <div id="name" style="font-weight:700">Jan NovákXXXX</div>
+          <div id="title" class="muted small">Senior SAP SD Consultant</div>
+        </div>
+      </div>
 
+      <nav aria-label="Language switch">
+        <button id="lang-cz" class="lang-btn" aria-pressed="false">🇨🇿 CZ</button>
+        <button id="lang-en" class="lang-btn active" aria-pressed="true">🇬🇧 EN</button>
+      </nav>
+    </header>
 
-<main>
-<section id="hero">
-<h2 data-i18n="hero_title"></h2>
-<p data-i18n="hero_intro"></p>
-</section>
+    <main class="card" id="mainCard">
+      <section class="hero" aria-label="hero">
+        <div>
+          <h1 id="heroTitle">Senior SAP SD Consultant</h1>
 
+          <!-- multi-paragraph intro area (up to 6 sentences/paragraphs), populated from texts.js -->
+          <div id="intro" class="intro" aria-live="polite">
+            <!-- filled by app.js -->
+          </div>
 
-<section id="skills">
-<h2 data-i18n="skills_title"></h2>
-<ul>
-<li>SAP SD</li>
-<li>Pricing</li>
-<li>Billing</li>
-<li>IDoc / EDI</li>
-<li>S/4HANA</li>
-</ul>
-</section>
+          <div class="cta" style="margin-top:18px">
+            <button id="hireBtn" class="btn btn-primary">Hire me</button>
+            <button id="cvBtn" class="btn btn-ghost">View CV</button>
+            <button id="linkedinBtn" class="btn btn-ghost" title="Open LinkedIn profile">LinkedIn</button>
+          </div>
 
+          <div class="skills" id="skills" style="margin-top:18px" aria-hidden="false">
+            <!-- filled by app.js -->
+          </div>
 
-<section id="projects">
-<h2 data-i18n="projects_title"></h2>
-<div class="projects">
-<div class="project">
-<h3>Project 1</h3>
-<p>Implementace S/4HANA - Distribuce</p>
-</div>
-<div class="project">
-<h3>Project 2</h3>
-<p>Integrace e‑shopu přes IDoc</p>
-</div>
-</div>
-</section>
+          <div id="availability" class="muted" style="margin-top:18px">Location: Prague · Available for remote & on-site</div>
+        </div>
 
+        <aside>
+          <div class="profile-photo" id="photo" aria-hidden="true">Photo</div>
 
-<section id="experience">
-<h2 data-i18n="experience_title"></h2>
-<ul>
-<li>2022–současnost: Senior SAP SD Consultant, XYZ Consulting</li>
-<li>2018–2022: SAP Analyst, ABC Manufacturing</li>
-</ul>
-</section>
+          <div class="card contact-card" style="margin-top:12px">
+            <div style="font-weight:700" id="contactTitle">Contact</div>
+            <div class="contact-list" id="contactList" role="list">
+              <!-- contact rows inserted by app.js -->
+            </div>
 
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <button class="btn btn-primary" id="msgBtn">Message</button>
+              <button class="btn btn-ghost" id="downloadCV">Download CV</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
 
-<section id="certifications">
-<h2 data-i18n="certifications_title"></h2>
-<ul>
-<li>SAP Certified Associate – Sales and Distribution, ERP 6.0 EhP7</li>
-<li>SAP S/4HANA Sales 1909</li>
-</ul>
-</section>
+    <footer class="muted" id="footer">© Jan Novák — SAP Consultant</footer>
+  </div>
 
-
-<section id="contact">
-<h2 data-i18n="contact_title"></h2>
-<p data-i18n="contact_text"></p>
-<a href="mailto:tvuj@email.cz">tvuj@email.cz</a>
-</section>
-</main>
-
-
-<footer>
-© <span id="year"></span> <span data-i18n="name"></span> — <span data-i18n="title"></span>
-</footer>
-
-
-<script src="script.js"></script>
+  <!-- external text config -->
+  <script src="texts.js"></script>
+  <!-- main behaviour -->
+  <script src="app.js"></script>
 </body>
 </html>
