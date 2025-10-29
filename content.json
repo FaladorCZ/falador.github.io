@@ -1,0 +1,26 @@
+{
+"cz": {
+"name": "Jméno Příjmení",
+"title": "SAP SD Konzultant",
+"hero_title": "Ahoj — jsem SAP SD konzultant",
+"hero_intro": "Pomáhám firmám optimalizovat prodejní procesy v SAP Sales & Distribution.",
+"skills_title": "Dovednosti",
+"projects_title": "Projekty",
+"experience_title": "Zkušenosti",
+"certifications_title": "Certifikace",
+"contact_title": "Kontakt",
+"contact_text": "Máte zájem o spolupráci nebo konzultaci? Napište mi."
+},
+"en": {
+"name": "Name Surname",
+"title": "SAP SD Consultant",
+"hero_title": "Hi — I’m an SAP SD Consultant",
+"hero_intro": "I help companies optimize their SAP Sales & Distribution processes.",
+"skills_title": "Skills",
+"projects_title": "Projects",
+"experience_title": "Experience",
+"certifications_title": "Certifications",
+"contact_title": "Contact",
+"contact_text": "Interested in cooperation or consulting? Feel free to contact me."
+}
+}
