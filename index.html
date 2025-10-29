@@ -1,60 +1,208 @@
-<!DOCTYPE html>
+<!--
+Osobní statická stránka ve stylu SAP Quartz (jednostránkový layout).
+Soubor: index.html
+Instrukce: zkopíruj tento HTML do souboru index.html a nahraj na GitHub Pages nebo do jiného hostingu.
+-->
+
+<!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moje osobní stránka</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jméno Příjmení — SAP SD Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f6fa;
-      color: #2f3640;
-      text-align: center;
-      margin: 0;
-      padding: 0;
+    /* Barevná paleta inspirovaná "Quartz" - čisté světle šedé pozadí s modrými akcenty */
+    :root{
+      --bg: #f4f6f7;        /* světle šedé pozadí */
+      --surface: #ffffff;   /* karty */
+      --muted: #6b7280;     /* šedý text */
+      --text: #0f1724;      /* tmavý text */
+      --sap-blue: #0a6ed1;  /* primární akcent */
+      --sap-blue-600: #075ab0;
+      --glass: rgba(15,23,36,0.04);
+      --radius: 12px;
+      --shadow: 0 6px 18px rgba(15,23,36,0.08);
+      --container: 1000px;
     }
-    header {
-      background: #273c75;
-      color: white;
-      padding: 2rem 1rem;
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
     }
-    section {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 1rem;
+
+    .wrap{max-width:var(--container);margin:34px auto;padding:24px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.5));box-shadow:var(--shadow);
     }
-    img {
-      border-radius: 50%;
-      width: 150px;
-      margin-top: 1rem;
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{
+      width:52px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--sap-blue),var(--sap-blue-600));color:white;font-weight:700;font-size:18px;box-shadow:0 6px 14px rgba(10,110,209,0.25)
     }
-    footer {
-      background: #dcdde1;
-      padding: 1rem;
-      font-size: 0.9em;
-      color: #718093;
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+    nav a.cta{background:var(--sap-blue);color:white;padding:8px 12px;border-radius:8px}
+
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:22px;margin-top:22px}
+    .card{background:var(--surface);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+
+    .intro h2{margin:6px 0 10px;font-size:28px}
+    .intro p{color:var(--muted);margin:0 0 16px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px;color:var(--sap-blue)}
+
+    .profile{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:16px;background:linear-gradient(180deg,#e6f0ff,#ffffff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--sap-blue);font-size:34px}
+    .contact a{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border-radius:8px;text-decoration:none;border:1px solid rgba(15,23,36,0.06);font-weight:600}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project{padding:14px;border-radius:10px;border:1px solid rgba(15,23,36,0.04);background:linear-gradient(180deg, #fff, #fbfcfd)}
+    .project h3{margin:0 0 8px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsivita */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
     }
+
+    /* drobné UI prvky */
+    .meta{font-size:13px;color:var(--muted)}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(15,23,36,0.03),transparent);margin:18px 0}
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Ahoj, jsem Jan Novák</h1>
-    <p>SAP SD konzultant z Prahy</p>
-  </header>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">JP</div>
+        <div>
+          <h1>Jméno Příjmení</h1>
+          <p>SAP SD Consultant • Procesy • Integrace</p>
+        </div>
+      </div>
 
-  <section>
-    <h2>O mně</h2>
-    <p>Pracuji v oblasti SAP SD, pomáhám firmám optimalizovat prodejní procesy a integraci s ostatními moduly SAP.</p>
-    <img src="https://via.placeholder.com/150" alt="Moje foto" />
-  </section>
+      <nav>
+        <a href="#about">O mně</a>
+        <a href="#projects">Projekty</a>
+        <a href="#contact" class="cta">Kontakt</a>
+      </nav>
+    </header>
 
-  <section>
-    <h2>Kontakt</h2>
-    <p>Napište mi na <a href="mailto:jan.novak@example.com">jan.novak@example.com</a></p>
-  </section>
+    <section class="hero">
+      <div class="card intro">
+        <div class="meta">Osobní web</div>
+        <h2>Ahoj — jsem SAP SD konzultant</h2>
+        <p>Specializuji se na nastavení obchodních procesů v SAP Sales & Distribution, tvorbu objednacích a fakturačních scénářů, migrace dat a integrace s externími systémy.</p>
 
-  <footer>
-    &copy; 2025 Jan Novák – Vytvořeno pomocí ChatGPT
-  </footer>
+        <div class="divider"></div>
+
+        <div>
+          <h4>Klíčové dovednosti</h4>
+          <div class="skills">
+            <span class="skill">SAP SD</span>
+            <span class="skill">Pricing</span>
+            <span class="skill">Billing</span>
+            <span class="skill">IDocs</span>
+            <span class="skill">SAP FI Integrace</span>
+            <span class="skill">ABAP spolupráce</span>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4>Krátké zkušenosti</h4>
+          <p class="meta">8+ let v implementacích SAP, práce s analytikou požadavků, školení uživatelů a podpora po go‑live.</p>
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <div class="avatar">JP</div>
+        <div>
+          <strong>Jméno Příjmení</strong>
+          <div class="meta">SAP SD Consultant — Praha</div>
+        </div>
+
+        <div class="contact">
+          <a href="mailto:tvuj@email.cz">Email</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+
+        <div style="width:100%;margin-top:10px;text-align:left">
+          <h4>Technologie</h4>
+          <div class="meta">SAP ECC / S/4HANA, SAP GUI, Fiori, IDoc, ALE, RFC</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" style="margin-top:22px">
+      <div class="card">
+        <h3>Vybrané projekty</h3>
+        <div class="projects" style="margin-top:12px">
+          <article class="project">
+            <h3>Implementace S/4HANA - Distribuce</h3>
+            <p>Koordinace SD modulu při migraci 5 zemí, konfigurace pricingu, testování end‑to‑end scénářů, školení 120 uživatelů.</p>
+          </article>
+
+          <article class="project">
+            <h3>Integrace e‑shopu</h3>
+            <p>Navržení IDoc rozhraní pro příjem objednávek, monitoring chyb a optimalizace throughputu.</p>
+          </article>
+
+          <article class="project">
+            <h3>Optimalizace fakturace</h3>
+            <p>Redesign fakturačních procesů a řízení kreditních not, úspora času o 30% v měsíčních uzávěrkách.</p>
+          </article>
+
+          <article class="project">
+            <h3>Data migration workshop</h3>
+            <p>Mapování datových struktur, validace historických záznamů a asistence při cut‑over.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <div class="card">
+        <h3>Kontakt</h3>
+        <p class="meta">Máte zájem o spolupráci nebo konzultaci? Napište mi — odpovím co nejdříve.</p>
+
+        <form style="margin-top:12px;display:flex;gap:8px;flex-direction:column;max-width:520px">
+          <input placeholder="Jméno" style="padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.06)">
+          <input placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.06)">
+          <textarea placeholder="Zpráva" rows="5" style="padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.06)"></textarea>
+          <div style="display:flex;gap:8px;align-items:center">
+            <button type="button" style="background:var(--sap-blue);color:white;padding:10px 14px;border-radius:8px;border:none;font-weight:700">Odeslat</button>
+            <div class="meta">(Tlačítko je ukázkové — pro odeslání přidej backend nebo FormSpree)</div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Jméno Příjmení — SAP SD Consultant • <span class="meta">Made with Quartz‑like UI</span>
+    </footer>
+  </div>
+
+  <script>
+    // doplnění roku
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
