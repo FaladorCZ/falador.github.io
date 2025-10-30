@@ -14,7 +14,7 @@ function updateLanguage(lang) {
 
   // Buttons
   document.getElementById('hireBtn').textContent = t.hire;
-  document.getElementById('cvBtn').textContent = t.viewCV;
+//  document.getElementById('cvBtn').textContent = t.viewCV;
   document.getElementById('linkedinBtn').textContent = t.linkedin;
 
   // Skills
@@ -43,6 +43,24 @@ function updateLanguage(lang) {
   // LinkedIn button
   document.getElementById('linkedinBtn').onclick = () =>
     window.open(t.linkedinUrl, '_blank');
+
+  // HireMe button
+  document.getElementById('hireBtn').onclick = () => {
+    //const email = "someone@example.com";
+    const email = t.myemail;
+    const subject = "Hello from your website";
+    //const body = "Hi Jan, I’d like to get in touch with you.";  
+    // Encode subject & body to make them URL-safe
+    //const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; 
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`; 
+    // Open the user's default mail app
+    window.location.href = mailtoLink;
+  };
+
+
+
+
+
 
   // Button states
   document.getElementById('lang-cz').classList.toggle('active', lang === 'cz');
