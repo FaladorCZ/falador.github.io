@@ -27,6 +27,7 @@ I’m based in Prague and open to both remote and hybrid cooperation.`,
       { label: "VAT ID", value: "CZ12345678" },
     ],
     linkedinUrl: "https://www.linkedin.com/in/jan-novak-sap",
+    myemail: "Sazma@email.cz",
   },
 
   cz: {
@@ -57,5 +58,6 @@ Působím v Praze, dostupný pro vzdálenou i kombinovanou spolupráci.`,
       { label: "IČ DPH", value: "CZ12345678" },
     ],
     linkedinUrl: "https://www.linkedin.com/in/jan-novak-sap",
+    myemail: "Sazma@email.cz",
   },
 };
