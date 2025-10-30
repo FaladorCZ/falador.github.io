@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jan Novák — SAP Consultant (CZ / EN)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark">JN</div>
+        <div>
+          <div id="name"></div>
+          <div id="title" class="muted small"></div>
+        </div>
+      </div>
+      <nav>
+        <button id="lang-cz" class="lang-btn">🇨🇿 CZ</button>
+        <button id="lang-en" class="lang-btn active">🇬🇧 EN</button>
+      </nav>
+    </header>
+
+    <main class="card">
+      <section class="hero">
+        <div>
+          <h1 id="heroTitle"></h1>
+          <p id="intro" class="intro"></p>
+
+          <div class="cta">
+            <button id="hireBtn" class="btn btn-primary"></button>
+            <button id="cvBtn" class="btn btn-ghost"></button>
+            <button id="linkedinBtn" class="btn btn-ghost">LinkedIn</button>
+          </div>
+
+          <div class="skills" id="skills"></div>
+          <div id="availability" class="muted"></div>
+        </div>
+
+        <aside>
+          <div class="profile-photo">Photo</div>
+          <div class="card contact">
+            <div id="contactTitle"></div>
+            <div class="contact-list" id="contactList"></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="muted">© Jan Novák — SAP Consultant</footer>
+  </div>
+
+  <script src="texts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
