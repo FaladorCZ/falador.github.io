@@ -57,9 +57,8 @@ function updateLanguage(lang) {
     window.location.href = mailtoLink;
   };
 
-
-
-
+  // Year
+  document.getElementById("year").textContent = new Date().getFullYear();
 
 
   // Button states

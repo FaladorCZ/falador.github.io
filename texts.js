@@ -1,63 +1,73 @@
 const texts = {
   en: {
-    name: "Jan Novák",
-    title: "Senior SAP SD Consultant",
-    heroTitle: "Senior SAP SD Consultant",
-    intro: `I help companies optimize order-to-cash processes in SAP S/4HANA.
-I focus on practical, results-oriented implementations that simplify daily work.
-My approach balances business and IT perspectives to ensure long-term value.
-I specialize in pricing, integration, and testing automation.
-Clients appreciate my structured communication and problem-solving mindset.
-I’m based in Prague and open to both remote and hybrid cooperation.`,
+    name: "Radek Sazma",
+    title: "Senior SAP MM/SD Consultant",
+    heroTitle: "Senior SAP MM/SD Consultant",
+    intro: `I work as an SAP SD/MM consultant, focusing on sales, distribution, and materials management. With many years of experience, I have a good understanding of logistics and supply chain processes and their interconnections across the entire company. I have extensive experience in testing (integration, unit, and user acceptance – UAT) and in integration between SD–MM modules, including work with IDocs. Additionally, I have several years of experience in the analysis, development, and integration of ERP, CRM, and BI systems.
+
+I believe that well-designed processes and effective use of SAP can help companies save time, reduce errors, and create space for real business growth.`,
     skills: [
-      "S/4HANA Migration",
-      "Pricing & Condition Technique",
-      "Integration (IDoc/PI/PO)",
-      "Test Management",
+      "SAP SD (Sales and Distribution)",
+      "SAP MM (Materials Management)",
+      "S/4HANA migration",
+      "End-user training and documentation",
+      "Testing (integration, unit, and UAT)",
+      "Integration: SD–MM, IDocs",
+      "SAP Public Cloud",
+      "Logistics and supply chain process knowledge",
+      "Cross-module process understanding",
+      "Hypercare support",
     ],
-    hire: "Hire me",
+    hire: "Get in touch",
     viewCV: "View CV",
     linkedin: "LinkedIn Profile",
-    availability: "Location: Prague · Available for remote & on-site",
-    contactTitle: "Contact",
+    availability: "Working from Prague, open to global remote opportunities.",
+//    contactTitle: "Contact",
     contact: [
-      { label: "Email", value: "jan.novak@email.cz" },
-      { label: "Phone", value: "+420 123 456 789" },
+      { label: "Email", value: "sazma@email.cz" },
+      { label: "Phone", value: "+420 606 795 221" },
       { label: "Address", value: "Prague, Czech Republic" },
-      { label: "VAT ID", value: "CZ12345678" },
+      { label: "VAT ID", value: "CZ8802251821" },
+      { label: "CIN", value: "21527971" },
+      { label: "Data box", value: "9irexy2" },
     ],
-    linkedinUrl: "https://www.linkedin.com/in/jan-novak-sap",
+    linkedinUrl: "https://www.linkedin.com/in/radek-sazma",
     myemail: "Sazma@email.cz",
   },
 
   cz: {
-    name: "Jan Novák",
-    title: "Senior SAP SD Konzultant",
-    heroTitle: "Senior SAP SD Konzultant",
-    intro: `Pomáhám firmám optimalizovat procesy od objednávky až po inkaso v SAP S/4HANA.
-Zaměřuji se na praktická a efektivní řešení, která zjednodušují každodenní práci.
-Mým cílem je propojit byznysový a IT pohled pro dlouhodobou hodnotu.
-Specializuji se na oblast cenotvorby, integrace a testovací automatizace.
-Klienti oceňují strukturovanou komunikaci a schopnost řešit problémy.
-Působím v Praze, dostupný pro vzdálenou i kombinovanou spolupráci.`,
+    name: "Radek Sazma",
+    title: "Senior SAP MM/SD Konzultant",
+    heroTitle: "Senior SAP MM/SD Konzultant",
+    intro: `Působím jako SAP SD/MM konzultant se zaměřením na oblast prodeje, distribuce a řízení materiálu. Díky letité praxi se hluboce orientuji v logistických a dodavatelských procesech a chápu jejich vzájemné propojení napříč celým podnikem. Mám bohaté zkušenosti s testováním (integračním, jednotkovým i uživatelským – UAT) a s integrací mezi moduly SD–MM, včetně práce s IDocy. Dále se mohu pochlubit několikaletou praxí v analýze, vývoji a integraci ERP, CRM a BI systémů.
+
+Věřím, že dobře nastavené procesy a efektivní využití SAPu dokážou firmám ušetřit čas, snížit chybovost a vytvořit prostor pro skutečný rozvoj.`,
     skills: [
+      "SAP SD (Prodej a distribuce)",
+      "SAP MM (Řízení materiálu / správa zásob)",
       "Migrace na S/4HANA",
-      "Cenotvorba a Condition Technique",
-      "Integrace (IDoc/PI/PO)",
-      "Řízení testování",
+      "Školení uživatelů a tvorba dokumentace",
+      "Testování (integrační, jednotkové a uživatelské – UAT)",
+      "Integrace: SD–MM, IDocy",
+      "SAP Public Cloud",
+      "Znalost procesů logistiky a dodavatelského řetězce",
+      "Pochopení mezi-modulových procesů",
+      "Podpora po spuštění (Hypercare)",
     ],
-    hire: "Najmout mě",
+    hire: "Kontaktujte mě",
     viewCV: "Zobrazit CV",
     linkedin: "Profil na LinkedIn",
-    availability: "Místo: Praha · K dispozici na dálku i na místě",
-    contactTitle: "Kontakt",
+    availability: "Pracuji z Prahy a jsem otevřený globálním projektům na dálku.",
+//    contactTitle: "Kontakt",
     contact: [
-      { label: "Email", value: "jan.novak@email.cz" },
-      { label: "Telefon", value: "+420 123 456 789" },
+      { label: "Email", value: "sazma@email.cz" },
+      { label: "Telefon", value: "+420 606 795 221" },
       { label: "Adresa", value: "Praha, Česká republika" },
-      { label: "IČ DPH", value: "CZ12345678" },
+      { label: "IČ DPH", value: "CZ8802251821" },
+      { label: "IČO", value: "21527971" },
+      { label: "Datová schránka", value: "9irexy2" },
     ],
-    linkedinUrl: "https://www.linkedin.com/in/jan-novak-sap",
+    linkedinUrl: "https://www.linkedin.com/in/radek-sazma",
     myemail: "Sazma@email.cz",
   },
 };
